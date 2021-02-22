@@ -47,7 +47,8 @@ function init() {
     descent            : args.descent,
     fixedWidth         : args.mono,
     fontHeight         : args.height,
-    centerHorizontally : args.center
+    centerHorizontally : args.center,
+    prefixStrip        : args.prefixstrip
   })
 
   const calledEmpty = Object.keys(args).length === 1 && args._.length === 0
@@ -123,6 +124,7 @@ function showHelp() {
     '  --jsonpath       '.bold + 'JSON output path (Defaults to <out>/<name>.json)\n' +
     '  -p, --prefix     '.bold + 'CSS classname prefix for icons (Default: icon)\n' +
     '  -t, --tag        '.bold + 'CSS base selector for icons (Default: i)\n' +
+    '  --prefixstrip    '.bold + 'Remove incoming icon prefix from separator (Default: none)\n' +
     '  --selector       '.bold + 'Use a selector instead of \'tag + prefix\' (Default: null)\n' +
     '  --normalize      '.bold + 'Normalize icons sizes (Default: false)\n' +
     '  --round          '.bold + 'Setup SVG rounding (Default: 10e12)\n' +
